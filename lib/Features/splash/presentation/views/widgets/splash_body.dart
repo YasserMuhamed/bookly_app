@@ -72,7 +72,7 @@ class _SplashBodyState extends State<SplashBody> with TickerProviderStateMixin {
   }
 }
 
-//animated text builder to rebuild animated text only
+//animated text builder widget to rebuild animated text only
 class AnimatedText extends StatelessWidget {
   const AnimatedText({
     super.key,
