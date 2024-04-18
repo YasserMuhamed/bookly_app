@@ -8,10 +8,9 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
-    var w = MediaQuery.of(context).size.width;
+
     return Padding(
-      padding: EdgeInsets.only(
-          left: w * .07, right: w * .07, top: h * .05, bottom: h * .03),
+      padding: EdgeInsets.only(top: h * .05, bottom: h * .03),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

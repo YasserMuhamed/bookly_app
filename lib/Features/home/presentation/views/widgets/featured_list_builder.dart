@@ -9,15 +9,12 @@ class FeaturedListItemBuilder extends StatelessWidget {
     var w = MediaQuery.of(context).size.width;
     return SizedBox(
       height: MediaQuery.of(context).size.height * .3,
-      child: Padding(
-        padding: EdgeInsets.only(left: w * .07),
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: ((context, index) => Padding(
-                  padding: EdgeInsets.only(right: w * .035),
-                  child: const FeaturedListItem(),
-                ))),
-      ),
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemBuilder: ((context, index) => Padding(
+                padding: EdgeInsets.only(right: w * .035),
+                child: const FeaturedListItem(),
+              ))),
     );
   }
 }
