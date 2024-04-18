@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.only(left: 30, right: 30, bottom: 30),
                 child: HomeAppBar(),
               ),
               FeaturedListItemBuilder(),

@@ -13,7 +13,7 @@ class FeaturedListItem extends StatelessWidget {
             image: const DecorationImage(
                 fit: BoxFit.fill,
                 image: NetworkImage(
-                    'https://www.shutterstock.com/image-photo/business-woman-drawing-global-structure-260nw-1006041130.jpg'))),
+                    'https://img.freepik.com/free-vector/world-book-day-flat-background_23-2147784400.jpg?w=740&t=st=1713465987~exp=1713466587~hmac=3384652c927a684d99a91db8cef3a5ca574565797ae516196ed4c598bc44f797'))),
       ),
     );
   }
