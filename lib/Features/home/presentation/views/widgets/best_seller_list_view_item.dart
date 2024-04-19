@@ -1,10 +1,9 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/rating_item.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/router.dart';
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -20,17 +19,7 @@ class BestSellerListViewItem extends StatelessWidget {
           height: 130,
           child: Row(
             children: [
-              AspectRatio(
-                aspectRatio: 2.5 / 4,
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      image: const DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage(
-                              'https://img.freepik.com/free-vector/world-book-day-flat-background_23-2147784400.jpg?w=740&t=st=1713465987~exp=1713466587~hmac=3384652c927a684d99a91db8cef3a5ca574565797ae516196ed4c598bc44f797'))),
-                ),
-              ),
+              const CustomBookImage(),
               const SizedBox(
                 width: 30,
               ),
@@ -54,7 +43,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     Text(
                       'J.K. Rowling',
                       style: Styles.textStyle14.copyWith(
-                          color: const Color(0xff707070),
+                          color: Colors.white.withOpacity(.7),
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(

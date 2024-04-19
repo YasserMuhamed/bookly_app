@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RatingItem extends StatelessWidget {
-  const RatingItem({super.key});
+  const RatingItem(
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
 
+  final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
+          size: 14,
           color: Color(0xFFFFDD4F),
         ),
         const SizedBox(
@@ -24,7 +28,8 @@ class RatingItem extends StatelessWidget {
           width: 5,
         ),
         Text('(1228)',
-            style: Styles.textStyle14.copyWith(color: const Color(0xff707070)))
+            style: Styles.textStyle14
+                .copyWith(color: Colors.white.withOpacity(.5)))
       ],
     );
   }
