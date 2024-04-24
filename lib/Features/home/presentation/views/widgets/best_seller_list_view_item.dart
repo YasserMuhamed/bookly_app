@@ -19,7 +19,10 @@ class BestSellerListViewItem extends StatelessWidget {
           height: 130,
           child: Row(
             children: [
-              const CustomBookImage(),
+              const CustomBookImage(
+                urlImage:
+                    "https://img.freepik.com/free-vector/world-book-day-flat-background_23-2147784400.jpg?w=740&t=st=1713465987~exp=1713466587~hmac=3384652c927a684d99a91db8cef3a5ca574565797ae516196ed4c598bc44f797",
+              ),
               const SizedBox(
                 width: 30,
               ),
