@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/rating_item.dart';
 import 'package:bookly_app/constants.dart';
@@ -7,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+  const BestSellerListViewItem({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,8 @@ class BestSellerListViewItem extends StatelessWidget {
           height: 130,
           child: Row(
             children: [
-              const CustomBookImage(
-                urlImage:
-                    "https://img.freepik.com/free-vector/world-book-day-flat-background_23-2147784400.jpg?w=740&t=st=1713465987~exp=1713466587~hmac=3384652c927a684d99a91db8cef3a5ca574565797ae516196ed4c598bc44f797",
+              CustomBookImage(
+                urlImage: bookModel.volumeInfo.imageLinks.thumbnail,
               ),
               const SizedBox(
                 width: 30,
@@ -33,7 +34,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * .5,
                       child: Text(
-                        'Harry Potter and the Goblet of Fire',
+                        bookModel.volumeInfo.title.toString(),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
                         style: Styles.textStyle20
@@ -44,7 +45,10 @@ class BestSellerListViewItem extends StatelessWidget {
                       height: 3,
                     ),
                     Text(
-                      'J.K. Rowling',
+                      bookModel.volumeInfo.authors == null
+                          ? "No Author"
+                          : bookModel.volumeInfo.authors![0],
+                      overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle14.copyWith(
                           color: Colors.white.withOpacity(.7),
                           fontWeight: FontWeight.w600),
@@ -56,11 +60,13 @@ class BestSellerListViewItem extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "19.99€",
+                          "Free",
                           style: Styles.textStyle20
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
-                        const RatingItem()
+                        RatingItem(
+                          count: bookModel.volumeInfo.pageCount ?? 0,
+                        )
                       ],
                     )
                   ],

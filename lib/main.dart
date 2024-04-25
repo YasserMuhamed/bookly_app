@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   setup();
+
   runApp(const Bookly());
 }
 
@@ -26,7 +27,9 @@ class Bookly extends StatelessWidget {
           )..fetchFeaturedBooks(),
         ),
         BlocProvider(
-            create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>()))
+            create: (context) => NewestBooksCubit(
+                  getIt.get<HomeRepoImpl>(),
+                )..fetchNewestBooks())
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,

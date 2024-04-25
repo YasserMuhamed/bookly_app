@@ -31,12 +31,12 @@ class SearchViewBody extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: SearchResultListView(),
-          ),
-        )
+        // Expanded(
+        //   child: Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 30),
+        //     child: SearchResultListView(),
+        //   ),
+        // )
       ],
     );
   }
