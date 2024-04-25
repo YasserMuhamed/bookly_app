@@ -16,7 +16,7 @@ class BookActions extends StatelessWidget {
                   bottomLeft: Radius.circular(15)),
               textColor: Colors.black,
               backgroundColor: Colors.white,
-              labelText: '19.99€'),
+              labelText: 'Download'),
         ),
         Expanded(
           child: CustomTextButton(

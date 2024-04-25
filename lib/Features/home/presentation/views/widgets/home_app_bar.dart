@@ -21,7 +21,9 @@ class HomeAppBar extends StatelessWidget {
           ),
           IconButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kSearchView);
+                GoRouter.of(context).push(
+                  AppRouter.kSearchView,
+                );
               },
               icon: SvgPicture.asset(
                 AssetsData.searchIcon,
