@@ -1,6 +1,8 @@
+import 'package:bookly_app/Features/search/presentation/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,6 +23,8 @@ class HomeAppBar extends StatelessWidget {
           ),
           IconButton(
               onPressed: () {
+                BlocProvider.of<SearchBooksCubit>(context)
+                    .fetchSearchBooks(search: "all");
                 GoRouter.of(context).push(
                   AppRouter.kSearchView,
                 );
