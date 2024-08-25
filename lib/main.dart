@@ -2,7 +2,7 @@ import 'package:bookly_app/Features/home/data/repos/home_repo_impl.dart';
 import 'package:bookly_app/Features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly_app/Features/search/data/search_repos/search_repo_impl.dart';
-import 'package:bookly_app/Features/search/presentation/manager/search_books_cubit/search_books_cubit.dart';
+import 'package:bookly_app/Features/search/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/api_service.dart';
 import 'package:bookly_app/core/utils/router.dart';
@@ -13,7 +13,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   setup();
-
   runApp(const Bookly());
 }
 

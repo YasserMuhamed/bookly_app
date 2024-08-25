@@ -1,5 +1,5 @@
 import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
-import 'package:bookly_app/Features/search/presentation/manager/search_books_cubit/search_books_cubit.dart';
+import 'package:bookly_app/Features/search/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

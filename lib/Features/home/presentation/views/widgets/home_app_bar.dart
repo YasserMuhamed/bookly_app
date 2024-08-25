@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/search/presentation/manager/search_books_cubit/search_books_cubit.dart';
+import 'package:bookly_app/Features/search/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/router.dart';
 import 'package:flutter/material.dart';

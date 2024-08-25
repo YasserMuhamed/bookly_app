@@ -46,7 +46,7 @@ class ServerFailure extends Failure {
       return ServerFailure(errMessage: response["error"]["message"]);
     } else if (statusCode == 404) {
       return ServerFailure(
-          errMessage: "Your Request Not Found, Please Try Later");
+          errMessage: "Your Request Not Found 404, Please Try Later");
     } else if (statusCode == 500) {
       return ServerFailure(
           errMessage: "Internal Server Error, Please Try Later");
