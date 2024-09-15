@@ -1,4 +1,4 @@
-name: iOS-ipa-build
+name: ios-ipa-build
 
 on:
   workflow_dispatch:
